@@ -38,7 +38,7 @@ export const HeroSection = () => {
                 <Users className="h-6 w-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Community Focused</h3>
-              <p className="text-white/80">Supporting Khoi, San, and other remote communities with accessible job search tools</p>
+              <p className="text-white/80">Supporting communities with accessible job search tools</p>
             </Card>
 
             <Card className="bg-white/10 border-white/20 p-6 text-white">

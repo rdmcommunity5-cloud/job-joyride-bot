@@ -50,7 +50,7 @@ const Index = () => {
                 <Globe className="h-12 w-12 text-success mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Community Focused</h3>
                 <p className="text-sm text-muted-foreground">
-                  Supporting remote communities including Khoi and San populations
+                  Supporting communities with accessible job search tools
                 </p>
               </CardContent>
             </Card>

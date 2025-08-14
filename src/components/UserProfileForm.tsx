@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/hooks/use-toast";
 import { User, Briefcase, GraduationCap, MapPin, Phone } from "lucide-react";
 
@@ -16,6 +17,7 @@ interface UserProfile {
   experience: string;
   education: string;
   jobPreferences: string;
+  receiveJobAlerts: boolean;
 }
 
 export const UserProfileForm = () => {
@@ -28,7 +30,8 @@ export const UserProfileForm = () => {
     skills: "",
     experience: "",
     education: "",
-    jobPreferences: ""
+    jobPreferences: "",
+    receiveJobAlerts: true
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -175,6 +178,24 @@ export const UserProfileForm = () => {
                   placeholder="What types of jobs are you looking for? (e.g., Remote work, Customer Service, IT Support, Administration)"
                   className="min-h-[80px]"
                   required
+                />
+              </div>
+
+              <div className="flex items-center justify-between space-x-2 p-4 bg-muted/30 rounded-lg">
+                <div className="space-y-0.5">
+                  <Label htmlFor="receiveJobAlerts" className="text-base">
+                    Receive Job Alerts
+                  </Label>
+                  <p className="text-sm text-muted-foreground">
+                    Get WhatsApp notifications when new matching jobs are found
+                  </p>
+                </div>
+                <Switch
+                  id="receiveJobAlerts"
+                  checked={profile.receiveJobAlerts}
+                  onCheckedChange={(checked) => 
+                    setProfile(prev => ({ ...prev, receiveJobAlerts: checked }))
+                  }
                 />
               </div>
 
