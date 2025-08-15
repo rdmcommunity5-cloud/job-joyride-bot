@@ -14,7 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      generated_cvs: {
+        Row: {
+          ats_score: number | null
+          created_at: string
+          cv_content: string
+          id: string
+          job_description: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          ats_score?: number | null
+          created_at?: string
+          cv_content: string
+          id?: string
+          job_description: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          ats_score?: number | null
+          created_at?: string
+          cv_content?: string
+          id?: string
+          job_description?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          education: string | null
+          email: string
+          experience: string | null
+          full_name: string
+          id: string
+          job_preferences: string | null
+          location: string | null
+          phone: string | null
+          receive_job_alerts: boolean | null
+          skills: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          education?: string | null
+          email: string
+          experience?: string | null
+          full_name: string
+          id?: string
+          job_preferences?: string | null
+          location?: string | null
+          phone?: string | null
+          receive_job_alerts?: boolean | null
+          skills?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          education?: string | null
+          email?: string
+          experience?: string | null
+          full_name?: string
+          id?: string
+          job_preferences?: string | null
+          location?: string | null
+          phone?: string | null
+          receive_job_alerts?: boolean | null
+          skills?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
